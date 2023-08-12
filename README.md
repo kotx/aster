@@ -36,7 +36,8 @@ A robust file uploader for [Cloudflare R2](https://www.cloudflare.com/developer-
 
 ### Method 2 (GitHub Actions)
 1. Fork this repository
-2. Set the secrets [`CF_API_TOKEN`](https://dash.cloudflare.com/profile/api-tokens) (with `Worker Scripts: Edit permissions`) and `CF_ACCOUNT_ID` in the repo settings
+2. Set the secrets [`CF_API_TOKEN`](https://dash.cloudflare.com/profile/api-tokens) (with the `Edit Cloudflare Workers	
+` template) and `CF_ACCOUNT_ID` in the repo settings
 3. Enable workflows in the Actions tab
 4. Update `wrangler.toml` as needed (this will trigger the workflow)
 5. In your Cloudflare dashboard, set the required secrets `CF_ACCOUNT_ID`, `R2_ACCESS_KEY`, `R2_SECRET_KEY` in the [worker settings](https://dash.cloudflare.com/?to=/:account/workers-and-pages).
