@@ -11,9 +11,6 @@ dependencies:
   '@aws-sdk/s3-request-presigner':
     specifier: ^3.388.0
     version: 3.388.0
-  '@types/mime':
-    specifier: ^3.0.1
-    version: 3.0.1
   '@uppy/aws-s3':
     specifier: ^3.2.1
     version: 3.2.1(@uppy/core@3.3.1)
@@ -40,6 +37,9 @@ devDependencies:
   '@cloudflare/workers-types':
     specifier: ^4.20230807.0
     version: 4.20230807.0
+  '@types/mime':
+    specifier: ^3.0.1
+    version: 3.0.1
   esbuild:
     specifier: ^0.19.1
     version: 0.19.1
@@ -1530,7 +1530,7 @@ packages:
 
   /@types/mime@3.0.1:
     resolution: {integrity: sha512-Y4XFY5VJAuw0FgAqPNd6NNoV44jbq9Bz2L7Rh/J6jLTiHBSBJa9fxqQIvkIld4GsoDOcCbvzOUAbLPsSKKg+uA==}
-    dev: false
+    dev: true
 
   /@uppy/aws-s3-multipart@3.5.2(@uppy/core@3.3.1):
     resolution: {integrity: sha512-5pQYobX4S23y74/wq9UReFfHVWkuzVj+fktR/Czdis/6ks5fHkjz8v2c7xd8TpWMZ/D5ozLufxvsjv/IYh6xtw==}
