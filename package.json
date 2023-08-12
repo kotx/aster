@@ -8,7 +8,7 @@
     "dev": "run-p -r client:dev worker:dev",
     "deploy": "run-s client:build worker:deploy",
     "worker:dev": "wrangler dev --remote",
-    "worker:deploy": "wrangler deploy --minify",
+    "worker:deploy": "wrangler deploy --minify --keep-vars",
     "client:build": "esbuild ./src/client/*.ts --bundle --minify --outdir=assets/dist --target=es6",
     "client:dev": "pnpm client:build --sourcemap --watch"
   },
