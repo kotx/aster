@@ -25,14 +25,14 @@ A robust file uploader for [Cloudflare R2](https://www.cloudflare.com/developer-
     }
 ]
 ```
+- Create a R2 token: [here](https://dash.cloudflare.com/?to=/:account/r2/api-tokens) with `Object Read & Write` permissions.
 
 ### Method 1 (Local)
 1. Clone locally: `git clone https://github.com/kotx/aster.git`
 2. Install dependencies: `pnpm i`
 3. Tweak `wrangler.toml` to your liking (set `bucket_name`, `PUBLIC_BUCKET_URL`, `R2_BUCKET_NAME`)
-4. Create a R2 token: [here](https://dash.cloudflare.com/?to=/:account/r2/api-tokens) with `Object Read & Write` permissions.
-5. Run `wrangler secret put [NAME]` for `CF_ACCOUNT_ID`, `R2_ACCESS_KEY`, `R2_SECRET_KEY`
-6. Run `pnpm run deploy`
+4. Run `wrangler secret put [NAME]` for `CF_ACCOUNT_ID`, `R2_ACCESS_KEY`, `R2_SECRET_KEY`
+5. Run `pnpm run deploy`
 
 ### Method 2 (GitHub Actions)
 1. Fork this repository
