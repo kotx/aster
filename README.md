@@ -1,5 +1,5 @@
 # Aster
-A robust file uploader for [Cloudflare R2](https://www.cloudflare.com/developer-platform/r2/).
+A robust file uploader for [Cloudflare R2](https://www.cloudflare.com/developer-platform/r2/). Compliments [Render](https://github.com/kotx/render) nicely.
 
 <img width="791" alt="a screenshot of aster" src="https://github.com/kotx/aster/assets/33439542/19b7ea0d-0d1c-40b5-963a-5d815cc9aa06">
 
