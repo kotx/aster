@@ -1,0 +1,16 @@
+name = "aster"
+compatibility_date = "2023-01-01"
+main = "src/index.ts"
+
+workers_dev = true
+
+[site]
+bucket = "./assets"
+
+[vars]
+PUBLIC_BUCKET_URL = "https://cdn.yukata.dev"
+
+[[r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "kot"
+preview_bucket_name = "kot"
