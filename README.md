@@ -1,6 +1,8 @@
 # Aster
 A robust file uploader for [Cloudflare R2](https://www.cloudflare.com/developer-platform/r2/).
 
+<img width="791" alt="a screenshot of aster" src="https://github.com/kotx/aster/assets/33439542/19b7ea0d-0d1c-40b5-963a-5d815cc9aa06">
+
 ## Notes
 - Aster **DOES NOT AUTHENTICATE**! You should put it behind [Cloudflare Access](https://developers.cloudflare.com/cloudflare-one/applications/).
 - Non-multipart uploads are currently disabled in the UI because Uppy doesn't display the URL: https://github.com/transloadit/uppy/issues/4618
