@@ -1,19 +1,28 @@
 {
+  "name": "aster",
+  "version": "0.1.0",
+  "author": "kotx",
+  "description": "A robust Cloudflare R2 file uploader.",
+  "license": "MIT",
   "scripts": {
-    "dev": "run-p client:dev worker:dev",
+    "dev": "run-p -r client:dev worker:dev",
+    "deploy": "run-s client:build worker:deploy",
     "worker:dev": "wrangler dev --remote",
     "worker:deploy": "wrangler deploy --minify",
     "client:build": "esbuild ./src/client/*.ts --bundle --minify --outdir=assets/dist --target=es6",
     "client:dev": "pnpm client:build --sourcemap --watch"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.388.0",
+    "@aws-sdk/s3-request-presigner": "^3.388.0",
     "@types/mime": "^3.0.1",
     "@uppy/aws-s3": "^3.2.1",
     "@uppy/core": "^3.3.1",
     "@uppy/dashboard": "^3.5.0",
     "@uppy/golden-retriever": "^3.1.0",
     "hono": "^3.4.1",
-    "mime": "^3.0.0"
+    "mime": "^3.0.0",
+    "ofetch": "^1.1.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230807.0",

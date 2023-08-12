@@ -2,16 +2,13 @@ import { Hono } from "hono";
 import { Bindings } from "../bindings";
 import { Layout } from "..";
 import { html } from "hono/html";
-import { generateFilename } from "../util/filename";
-import mime from "mime";
+import { generateFilenameWithExtension } from "../util/filename";
 
 const app = new Hono<{ Bindings: Bindings }>();
 
 app.post("/", async (c) => {
   const formdata = await c.req.formData();
   const urlString = formdata.get("url");
-
-  let filename = generateFilename();
 
   if (urlString === null) {
     return c.html(
@@ -23,7 +20,6 @@ app.post("/", async (c) => {
   }
 
   const url = new URL(urlString.toString());
-
   const resp = await fetch(url);
 
   if (!resp.ok) {
@@ -38,17 +34,16 @@ app.post("/", async (c) => {
   }
 
   const contentType = resp.headers.get("Content-Type");
-
-  const extension =
-    (contentType && mime.getExtension(contentType)) ||
-    url.pathname.split(".").pop(); // fallback to extension in url (FIXME: security?)
-
-  console.log({ contentType, extension, url });
-  if (extension) filename += "." + extension;
+  const filename = generateFilenameWithExtension(contentType, url.pathname);
 
   await c.env.R2_BUCKET.put(filename, resp.body, {
     httpMetadata: {
       contentType: contentType?.toString(),
+    },
+    customMetadata: {
+      uploader: "aster",
+      "source-ray": c.req.header("cf-ray")!,
+      "source-url": url.toString(),
     },
   });
 
