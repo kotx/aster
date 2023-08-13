@@ -1,11 +1,13 @@
 import Uppy from "@uppy/core";
 import Dashboard from "@uppy/dashboard";
 import GoldenRetriever from "@uppy/golden-retriever";
+import ImageEditor from "@uppy/image-editor";
 import S3 from "@uppy/aws-s3";
 import { ofetch } from "ofetch";
 
 import "@uppy/core/dist/style.min.css";
 import "@uppy/dashboard/dist/style.min.css";
+import "@uppy/image-editor/dist/style.min.css";
 
 new Uppy()
   .use(Dashboard, {
@@ -15,6 +17,7 @@ new Uppy()
     showLinkToFileUploadResult: true,
   })
   .use(GoldenRetriever, { serviceWorker: true })
+  .use(ImageEditor, { target: Dashboard, quality: 1.0 })
   .use(S3, {
     // Only use multipart uploads for files larger than 100 MB.
     shouldUseMultipart: true, // TODO: (file) => file.size > 100 * 2 ** 20,

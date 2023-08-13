@@ -23,6 +23,9 @@ dependencies:
   '@uppy/golden-retriever':
     specifier: ^3.1.0
     version: 3.1.0(@uppy/core@3.3.1)
+  '@uppy/image-editor':
+    specifier: ^2.1.2
+    version: 2.1.2(@uppy/core@3.3.1)
   hono:
     specifier: ^3.4.1
     version: 3.4.1
@@ -1606,6 +1609,17 @@ packages:
       lodash: 4.17.21
     dev: false
 
+  /@uppy/image-editor@2.1.2(@uppy/core@3.3.1):
+    resolution: {integrity: sha512-nWg9kFh+9OelYnY6fr1Hto2Fx6Fy1MyQAsCZAzy9umAQMkGrIs3Ql2iYDap4gm9IdiBI8ajzX57qTepLXbKPXg==}
+    peerDependencies:
+      '@uppy/core': ^3.2.0
+    dependencies:
+      '@uppy/core': 3.3.1
+      '@uppy/utils': 5.4.3
+      cropperjs: 1.5.7
+      preact: 10.16.0
+    dev: false
+
   /@uppy/informer@3.0.2(@uppy/core@3.3.1):
     resolution: {integrity: sha512-WPOEZCxAaw9JBhkneIW3bm6SqceUtZGxDT++3SlwKUyn4kr0p808LrCVITooUkyqrd0lOn9TAFKFNjinUxbCGw==}
     peerDependencies:
@@ -1870,6 +1884,10 @@ packages:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
     dev: true
+
+  /cropperjs@1.5.7:
+    resolution: {integrity: sha512-sGj+G/ofKh+f6A4BtXLJwtcKJgMUsXYVUubfTo9grERiDGXncttefmue/fyQFvn8wfdyoD1KhDRYLfjkJFl0yw==}
+    dev: false
 
   /cross-spawn@6.0.5:
     resolution: {integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==}
