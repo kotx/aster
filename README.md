@@ -38,7 +38,7 @@ A robust file uploader for [Cloudflare R2](https://www.cloudflare.com/developer-
 1. Clone locally: `git clone https://github.com/kotx/aster.git`
 2. Install dependencies: `pnpm i`
 3. Tweak `wrangler.toml` to your liking (set `bucket_name`, `PUBLIC_BUCKET_URL`, `R2_BUCKET_NAME`)
-4. Run `wrangler secret put [NAME]` for `CF_ACCOUNT_ID`, `R2_ACCESS_KEY`, `R2_SECRET_KEY`
+4. Run `wrangler secret put [NAME]` for `R2_ACCESS_KEY`, `R2_SECRET_KEY`
 5. Run `pnpm run deploy`
 
 ### Method 2 (GitHub Actions)
@@ -47,7 +47,7 @@ A robust file uploader for [Cloudflare R2](https://www.cloudflare.com/developer-
 ` template) and `CF_ACCOUNT_ID` in the repo settings
 3. Enable workflows in the Actions tab
 4. Update `wrangler.toml` as needed (this will trigger the workflow)
-5. In your Cloudflare dashboard, set the required secrets `CF_ACCOUNT_ID`, `R2_ACCESS_KEY`, `R2_SECRET_KEY` in the [worker settings](https://dash.cloudflare.com/?to=/:account/workers-and-pages).
+5. In your Cloudflare dashboard, set the required secrets `R2_ACCESS_KEY`, `R2_SECRET_KEY` in the [worker settings](https://dash.cloudflare.com/?to=/:account/workers-and-pages).
 
 ## Development
 Remember to add `"http://127.0.0.1:8787", "http://localhost:8787"` to the allowed origins CORS policy above.
