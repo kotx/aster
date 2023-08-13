@@ -111,7 +111,7 @@ app.get("/s3-multipart/:id", async (c) => {
       PartNumber: part.PartNumber,
       Size: part.Size,
       ETag: part.ETag,
-    }))
+    })) ?? []
   );
 });
 
