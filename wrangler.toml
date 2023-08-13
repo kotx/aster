@@ -11,7 +11,7 @@ bucket = "./assets"
 [vars]
 PUBLIC_BUCKET_URL = "https://cdn.yukata.dev" # CHANGEME
 R2_BUCKET_NAME = "kot" # CHANGEME
-CF_ACCOUNT_ID = afdc9b319dc9eb7543f28d8e7cd900c0 # CHANGEME
+CF_ACCOUNT_ID = "afdc9b319dc9eb7543f28d8e7cd900c0" # CHANGEME
 
 [[r2_buckets]]
 binding = "R2_BUCKET"
