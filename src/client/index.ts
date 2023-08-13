@@ -41,7 +41,7 @@ new Uppy()
       const res = await ofetch(
         `/uppy/s3-multipart/${encodeURIComponent(uploadId)}`,
         {
-          body: { key },
+          query: { key },
         }
       );
 

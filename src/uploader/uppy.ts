@@ -94,9 +94,8 @@ app.post("/s3-multipart", async (c) => {
 });
 
 app.get("/s3-multipart/:id", async (c) => {
-  type ListParts = { key: string };
   const { id } = c.req.param();
-  const { key } = await c.req.json<ListParts>();
+  const key = c.req.query("key");
 
   const s3 = makeS3(c.env);
   const parts = await s3.send(
